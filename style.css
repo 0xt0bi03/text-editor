@@ -2,8 +2,11 @@
 :root
 {
     --bg: black;
-    --framebg: #333;
+    --framebg: #111;
     --fg: wheat;
+
+    --titlefontsize: 60px;
+    --contentfontsize: 25px;
 }
 
 
@@ -39,21 +42,44 @@ body
 
 
 /* TEXT AREA */
-#title
-{
-    width: 90%;
-    height: 100px;
-    resize: none;
-    background-color: var(--framebg);
-    /* border: none; */
-
-    font-size: 50px;
-    color: var(--fg);
-    
-}
-
 #horizontal
 {
     width: 90%;
     opacity: 50%;
+    margin-bottom: 40px;
+}
+
+.textbox
+{
+    width: 90%;
+    background-color: var(--framebg);
+    color: var(--fg);
+    /* border: none; */
+
+}
+
+#title
+{
+    height: 90px;
+    resize: none;
+    font-size: var(--titlefontsize);
+    
+}
+
+
+#content
+{
+    overflow: hidden;
+    resize: none;
+    font-size: var(--contentfontsize);
+    box-sizing: border-box;
+}
+
+
+
+/* EFFECTS */
+.textbox:focus
+{
+    outline: none;
+    border: none;
 }
