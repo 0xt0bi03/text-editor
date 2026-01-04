@@ -1,6 +1,6 @@
 body
 {
-    background-color: #333;
+    background-color: black;
     color: wheat;
     
     /* DISPLAY */
@@ -16,7 +16,27 @@ body
     width: 100%;
     max-width: 800px;
     height: 95vh;
-    background-color: cadetblue;
+    background-color: #333;
+
+    /* PADDING */
+    padding-top: 50px;
+    box-sizing: border-box;
+    
+    /* DISPLAY */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
+#horizontal
+{
+    width: 90%;
+    opacity: 50%;
+}
+/* TEXT AREA */
+#title
+{
+    width: 90%;
+
+}
