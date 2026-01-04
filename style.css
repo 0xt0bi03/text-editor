@@ -1,3 +1,8 @@
+/* FONTS */
+@font-face {
+    font-family: dyslexie;
+    src: url(fonts/OpenDyslexic-Regular.otf);
+}
 
 :root
 {
@@ -9,6 +14,11 @@
     --contentfontsize: 25px;
 }
 
+*
+{
+    font-family: dyslexie;
+
+}
 
 body
 {
@@ -57,6 +67,9 @@ body
     padding-left: 15px;
     box-sizing: border-box;
     border: none;
+    overflow: hidden;
+    resize: none;
+    box-sizing: border-box;
 
     /* background-color: #222; */
 
@@ -65,7 +78,6 @@ body
 #title
 {
     height: 90px;
-    resize: none;
     font-size: var(--titlefontsize);
 
 }
@@ -74,10 +86,10 @@ body
 #content
 {
     height: 90%;
-    overflow: hidden;
+    /* overflow: hidden;
     resize: none;
+    box-sizing: border-box; */
     font-size: var(--contentfontsize);
-    box-sizing: border-box;
     /* height: ; */
 }
 
