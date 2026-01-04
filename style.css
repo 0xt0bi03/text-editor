@@ -5,7 +5,7 @@
     --framebg: #111;
     --fg: wheat;
 
-    --titlefontsize: 60px;
+    --titlefontsize: 80px;
     --contentfontsize: 25px;
 }
 
@@ -54,7 +54,11 @@ body
     width: 90%;
     background-color: var(--framebg);
     color: var(--fg);
-    /* border: none; */
+    padding-left: 15px;
+    box-sizing: border-box;
+    border: none;
+
+    /* background-color: #222; */
 
 }
 
@@ -63,16 +67,18 @@ body
     height: 90px;
     resize: none;
     font-size: var(--titlefontsize);
-    
+
 }
 
 
 #content
 {
+    height: 90%;
     overflow: hidden;
     resize: none;
     font-size: var(--contentfontsize);
     box-sizing: border-box;
+    /* height: ; */
 }
 
 
