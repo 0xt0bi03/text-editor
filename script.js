@@ -7,5 +7,5 @@ function autoResize() {
 
 textareas.forEach(t => {
   t.addEventListener("input", autoResize);
-  autoResize.call(t);   // set initial height
+  autoResize.call(t);
 });
