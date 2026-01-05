@@ -59,29 +59,6 @@ body
     margin-bottom: 40px;
 }
 
-/* .textbox
-{
-    width: 90%;
-    background-color: var(--framebg);
-    color: var(--fg);
-    padding-left: 15px;
-    box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-#title
-{
-    height: 90px;
-    font-size: var(--titlefontsize);
-
-}
-
-
-#content
-{
-    height: 90%;
-    font-size: var(--contentfontsize);
-} */
 
 .textbox{
     width: 90%;
