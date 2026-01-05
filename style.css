@@ -4,84 +4,110 @@
     src: url(fonts/OpenDyslexic-Regular.otf);
 }
 
-:root
-{
+:root {
     --bg: black;
     --framebg: #111;
     --fg: wheat;
-
-    --titlefontsize: 40px;
+    --titlefontsize: 50px;
     --contentfontsize: 25px;
 }
 
-*
-{
-    font-family: dyslexie;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: dyslexie, Arial, sans-serif;
 }
 
-body
-{
+body {
     background-color: var(--bg);
     color: var(--fg);
-    
-    /* DISPLAY */
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 96vh;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-/* Frame */
-.frame
-{
+.frame {
     width: 100%;
     max-width: 800px;
-    height: 95vh;
+    min-height: 95vh;
     background-color: var(--framebg);
-
-    /* PADDING */
-    padding-top: 50px;
-    box-sizing: border-box;
-    
-    /* DISPLAY */
+    padding: 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 8px;
 }
 
-
-/* TEXT AREA */
-#horizontal
-{
+/* Auto-growing textarea using grid trick */
+.textarea-wrapper {
     width: 90%;
-    opacity: 50%;
-    margin-bottom: 40px;
+    display: grid;
+    margin-bottom: 20px;
 }
 
+.textarea-wrapper::after {
+    content: attr(data-value) ' ';
+    white-space: pre-wrap;
+    visibility: hidden;
+    grid-area: 1 / 1 / 2 / 2;
+    padding: inherit;
+    border: inherit;
+    font: inherit;
+}
 
-.textbox{
-    width: 90%;
-    background-color: var(--framebg);
-    color: var(--fg);
-    box-sizing: border-box;
+.textarea-wrapper textarea {
+    grid-area: 1 / 1 / 2 / 2;
     resize: none;
     overflow: hidden;
+    width: 100%;
+    background-color: var(--framebg);
+    color: var(--fg);
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    font: inherit;
 }
 
-#title{
+#title-wrapper {
     font-size: var(--titlefontsize);
+    font-weight: bold;
 }
 
-#content{
+#title-wrapper::after {
+    font-size: var(--titlefontsize);
+    font-weight: bold;
+}
+
+#content-wrapper {
+    font-size: var(--contentfontsize);
+    flex: 1;
+}
+
+#content-wrapper::after {
     font-size: var(--contentfontsize);
 }
 
-
-
-/* EFFECTS */
-.textbox:focus
-{
-    outline: none;
+hr {
+    width: 90%;
+    opacity: 0.5;
+    margin-bottom: 20px;
     border: none;
+    border-top: 1px solid var(--fg);
+}
+
+textarea::placeholder {
+    color: var(--fg);
+    opacity: 0.5;
+}
+
+/* Smooth transitions */
+textarea {
+    transition: opacity 0.2s;
+}
+
+textarea:focus {
+    opacity: 1;
 }

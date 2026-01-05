@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Smart Notepad</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="frame">
-        <textarea class="textbox" placeholder="Title" id="title"></textarea>
-        <hr id="horizontal">
-        <textarea class="textbox" placeholder="Enter text" id="content"></textarea>
+        <div class="textarea-wrapper" id="title-wrapper">
+            <textarea id="title" placeholder="Title" rows="1"></textarea>
+        </div>
+        
+        <hr>
+        
+        <div class="textarea-wrapper" id="content-wrapper">
+            <textarea id="content" placeholder="Enter text" rows="1"></textarea>
+        </div>
     </div>
 
-    
     <script src="script.js"></script>
 </body>
 </html>
