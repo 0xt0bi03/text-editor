@@ -59,19 +59,14 @@ body
     margin-bottom: 40px;
 }
 
-.textbox
+/* .textbox
 {
     width: 90%;
     background-color: var(--framebg);
     color: var(--fg);
     padding-left: 15px;
     box-sizing: border-box;
-    /* border: none;
-    overflow: hidden;
-    resize: none; */
     box-sizing: border-box;
-
-
 }
 
 #title
@@ -86,13 +81,32 @@ body
 {
     height: 90%;
     font-size: var(--contentfontsize);
+} */
+
+.textbox{
+    width: 90%;
+    background-color: var(--framebg);
+    color: var(--fg);
+    /* padding-left: 15px; */
+    box-sizing: border-box;
+    /* border: none; */
+    resize: none;
+    overflow: hidden;   /* important */
+}
+
+#title{
+    font-size: var(--titlefontsize);
+}
+
+#content{
+    font-size: var(--contentfontsize);
 }
 
 
 
 /* EFFECTS */
-.textbox:focus
+/* .textbox:focus
 {
     outline: none;
     border: none;
-}
+} */
