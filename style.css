@@ -64,11 +64,9 @@ body
     width: 90%;
     background-color: var(--framebg);
     color: var(--fg);
-    /* padding-left: 15px; */
     box-sizing: border-box;
-    /* border: none; */
     resize: none;
-    overflow: hidden;   /* important */
+    overflow: hidden;
 }
 
 #title{
@@ -82,8 +80,8 @@ body
 
 
 /* EFFECTS */
-/* .textbox:focus
+.textbox:focus
 {
     outline: none;
     border: none;
-} */
+}
