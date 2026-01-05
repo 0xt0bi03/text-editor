@@ -1,7 +1,7 @@
 const textareas = document.querySelectorAll("textarea");
 
 function autoResize() {
-  this.style.height = "auto";
+  this.style.height = "fit-content";
   this.style.height = this.scrollHeight + "px";
 }
 
